@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Upload Success</title>
+</head>
+<body>
+    <div class="container">
+        <h2>PDF Uploaded Successfully!</h2>
+        <form action="/ask_question" method="post">
+            <input type="hidden" name="pdf_path" value="{{ pdf_path }}">
+            <label for="question">Ask a question:</label>
+            <input type="text" name="question" required>
+            <input type="submit" value="Ask Question" class="btn">
+        </form>
+        <a href="/" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>
